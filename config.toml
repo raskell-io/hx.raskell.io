@@ -49,14 +49,48 @@ github = "https://github.com/raskell-io/hx"
 
 # Product configuration
 [extra.product]
-tagline = "Extremely fast Haskell package and project manager"
-subtitle = "Written in Rust. Built for speed."
+tagline = "Haskell, at lightspeed"
+subtitle = "A blazingly fast package manager and build tool for Haskell, written in Rust. One tool to replace them all."
 gradient_title = true
 badge = "Coming Soon"
 install_command = "curl -fsSL https://get.raskell.io/hx | sh"
-install_alternatives = "Or download from <a href='https://github.com/raskell-io/hx/releases'>GitHub Releases</a>"
+install_alternatives = "Or install via <a href='https://github.com/raskell-io/hx/releases'>GitHub Releases</a> or <a href='/docs/installation/'>other methods</a>"
 footer_tagline = "The modern Haskell toolchain."
 footer_note = "Built with love by <a href='https://raskell.io'>raskell.io</a>"
+
+# Features section
+features_title = "Why hx?"
+features_subtitle = "Everything you need to build Haskell projects, unified in a single tool that's 10-100x faster than existing solutions."
+
+[[extra.product.features]]
+title = "Instant resolution"
+description = "Dependency resolution in milliseconds, not minutes. hx uses a modern SAT solver with aggressive caching to make waiting a thing of the past."
+icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>"""
+
+[[extra.product.features]]
+title = "Unified toolchain"
+description = "One tool for everything: create projects, manage dependencies, build, test, run, and publish. No more juggling between cabal, stack, and ghcup."
+icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>"""
+
+[[extra.product.features]]
+title = "Drop-in compatible"
+description = "Works with your existing .cabal files and Hackage packages. Migrate in seconds, not hours. Your workflow stays the same, just faster."
+icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>"""
+
+[[extra.product.features]]
+title = "GHC management"
+description = "Automatic GHC version management. hx downloads, installs, and switches compiler versions seamlessly based on your project requirements."
+icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>"""
+
+[[extra.product.features]]
+title = "Reproducible builds"
+description = "Lock files by default. Every build is reproducible across machines and CI. Share your lockfile, share your exact build."
+icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>"""
+
+[[extra.product.features]]
+title = "Written in Rust"
+description = "No runtime dependencies. Single static binary. Native performance with memory safety. Install once, run anywhere."
+icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></svg>"""
 
 # Social links
 [extra.social]
