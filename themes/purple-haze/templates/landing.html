@@ -3,13 +3,12 @@
 {% block title %}{{ config.title }} - {{ config.extra.product.tagline | default(value=config.description) }}{% endblock %}
 
 {% block content %}
-{# SVG filter for gooey/metaball merge effect #}
+{# SVG filter for gooey/metaball merge effect - sharp edges #}
 <svg class="visually-hidden" aria-hidden="true">
     <defs>
         <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -9" result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -15" result="goo" />
         </filter>
     </defs>
 </svg>
@@ -25,6 +24,10 @@
             <div class="orb orb--4"></div>
             <div class="orb orb--5"></div>
             <div class="orb orb--6"></div>
+            <div class="orb orb--7"></div>
+            <div class="orb orb--8"></div>
+            <div class="orb orb--9"></div>
+            <div class="orb orb--10"></div>
         </div>
     </div>
 

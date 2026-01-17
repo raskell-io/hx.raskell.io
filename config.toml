@@ -55,6 +55,84 @@ gradient_title = true
 badge = "Coming Soon"
 install_command = "curl -fsSL https://get.raskell.io/hx | sh"
 install_alternatives = "Or download from <a href='https://github.com/raskell-io/hx/releases'>GitHub Releases</a>"
+footer_tagline = "The modern Haskell toolchain."
+footer_note = "Built with love by <a href='https://raskell.io'>raskell.io</a>"
+
+# Social links
+[extra.social]
+github = "https://github.com/raskell-io/hx"
+twitter = "https://x.com/raskell_io"
+discord = "https://discord.gg/raskell"
+
+# Footer link groups
+[[extra.product.footer_links]]
+title = "Documentation"
+[[extra.product.footer_links.links]]
+text = "Getting Started"
+url = "/docs/getting-started/"
+[[extra.product.footer_links.links]]
+text = "Installation"
+url = "/docs/installation/"
+[[extra.product.footer_links.links]]
+text = "CLI Reference"
+url = "/docs/cli/"
+[[extra.product.footer_links.links]]
+text = "Configuration"
+url = "/docs/configuration/"
+[[extra.product.footer_links.links]]
+text = "Migration Guide"
+url = "/docs/migration/"
+
+[[extra.product.footer_links]]
+title = "Resources"
+[[extra.product.footer_links.links]]
+text = "GitHub"
+url = "https://github.com/raskell-io/hx"
+external = true
+[[extra.product.footer_links.links]]
+text = "Changelog"
+url = "https://github.com/raskell-io/hx/blob/main/CHANGELOG.md"
+external = true
+[[extra.product.footer_links.links]]
+text = "Contributing"
+url = "https://github.com/raskell-io/hx/blob/main/CONTRIBUTING.md"
+external = true
+[[extra.product.footer_links.links]]
+text = "Roadmap"
+url = "https://github.com/raskell-io/hx/projects"
+external = true
+
+[[extra.product.footer_links]]
+title = "Community"
+[[extra.product.footer_links.links]]
+text = "Discord"
+url = "https://discord.gg/raskell"
+external = true
+[[extra.product.footer_links.links]]
+text = "Twitter / X"
+url = "https://x.com/raskell_io"
+external = true
+[[extra.product.footer_links.links]]
+text = "Discussions"
+url = "https://github.com/raskell-io/hx/discussions"
+external = true
+[[extra.product.footer_links.links]]
+text = "Blog"
+url = "https://raskell.io/blog/"
+external = true
+
+[[extra.product.footer_links]]
+title = "Legal"
+[[extra.product.footer_links.links]]
+text = "License (MIT)"
+url = "https://github.com/raskell-io/hx/blob/main/LICENSE"
+external = true
+[[extra.product.footer_links.links]]
+text = "Privacy Policy"
+url = "/privacy/"
+[[extra.product.footer_links.links]]
+text = "Terms of Service"
+url = "/terms/"
 
 # Navigation
 [[extra.nav_links]]
