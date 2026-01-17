@@ -52,7 +52,7 @@ github = "https://github.com/raskell-io/hx"
 tagline = "Haskell, finally fast"
 subtitle = "A fast, opinionated, batteries-included toolchain for Haskell. One command to build, test, run, and ship."
 gradient_title = true
-badge = "v0.3.1"
+badge = "v0.3.6"
 install_command = "curl -fsSL https://raw.githubusercontent.com/raskell-io/hx/main/install.sh | sh"
 install_alternatives = "Or install via <a href='https://github.com/raskell-io/hx/releases'>GitHub Releases</a> or <code>cargo install hx-cli</code>"
 footer_tagline = "The modern Haskell toolchain."
@@ -91,6 +91,26 @@ icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox
 title = "Extensible"
 description = "Plugin system with Steel (Scheme) for custom workflows. Pre/post build hooks. Nix integration. Generate Homebrew formulas and install scripts."
 icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>"""
+
+# Benchmark highlights (shown on landing page)
+[extra.product.benchmarks]
+enabled = true
+title = "Blazingly fast"
+subtitle = "Native builds bypass Cabal overhead for simple projects"
+cta_text = "See full benchmarks"
+cta_url = "/benchmarks/"
+
+[[extra.product.benchmarks.stats]]
+label = "Cold build"
+native = "0.48s"
+cabal = "2.68s"
+speedup = "5.6x"
+
+[[extra.product.benchmarks.stats]]
+label = "Incremental"
+native = "0.05s"
+cabal = "0.39s"
+speedup = "7.8x"
 
 # Social links
 [extra.social]
@@ -172,6 +192,10 @@ url = "/terms/"
 [[extra.nav_links]]
 name = "Docs"
 url = "/docs/"
+
+[[extra.nav_links]]
+name = "Benchmarks"
+url = "/benchmarks/"
 
 [[extra.nav_links]]
 name = "GitHub"

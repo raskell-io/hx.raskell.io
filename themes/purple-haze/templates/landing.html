@@ -121,6 +121,50 @@
 </section>
 {% endif %}
 
+{# Benchmarks Section #}
+{% if config.extra.product.benchmarks.enabled %}
+<section class="benchmarks">
+    <div class="container">
+        <div class="benchmarks__header">
+            <h2 class="benchmarks__title">{{ config.extra.product.benchmarks.title }}</h2>
+            <p class="benchmarks__subtitle">{{ config.extra.product.benchmarks.subtitle }}</p>
+        </div>
+
+        <div class="benchmarks__grid">
+            {% for stat in config.extra.product.benchmarks.stats %}
+            <div class="benchmark-card">
+                <div class="benchmark-card__label">{{ stat.label }}</div>
+                <div class="benchmark-card__comparison">
+                    <div class="benchmark-card__bar benchmark-card__bar--native">
+                        <span class="benchmark-card__bar-label">hx native</span>
+                        <span class="benchmark-card__bar-value">{{ stat.native }}</span>
+                    </div>
+                    <div class="benchmark-card__bar benchmark-card__bar--cabal">
+                        <span class="benchmark-card__bar-label">cabal</span>
+                        <span class="benchmark-card__bar-value">{{ stat.cabal }}</span>
+                    </div>
+                </div>
+                <div class="benchmark-card__speedup">
+                    <span class="benchmark-card__speedup-value">{{ stat.speedup }}</span>
+                    <span class="benchmark-card__speedup-label">faster</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="benchmarks__cta">
+            <a href="{{ config.extra.product.benchmarks.cta_url }}" class="btn btn--ghost">
+                {{ config.extra.product.benchmarks.cta_text }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
 {# Content from markdown (if any) #}
 {% if section.content %}
 <section class="content">
