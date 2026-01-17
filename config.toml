@@ -51,6 +51,8 @@ github = "https://github.com/raskell-io/hx"
 [extra.product]
 tagline = "Extremely fast Haskell package and project manager"
 subtitle = "Written in Rust. Built for speed."
+gradient_title = true
+badge = "Coming Soon"
 install_command = "curl -fsSL https://get.raskell.io/hx | sh"
 install_alternatives = "Or download from <a href='https://github.com/raskell-io/hx/releases'>GitHub Releases</a>"
 
