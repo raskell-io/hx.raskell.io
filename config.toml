@@ -1,0 +1,62 @@
+# Zola configuration for hx website
+# https://www.getzola.org/documentation/getting-started/configuration/
+
+base_url = "https://hx.raskell.io"
+title = "hx"
+description = "An extremely fast Haskell package and project manager, written in Rust."
+default_language = "en"
+theme = "purple-haze"
+
+# Compile Sass/SCSS
+compile_sass = true
+
+# Generate feed
+generate_feeds = false
+
+# Build options
+build_search_index = false
+minify_html = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+smart_punctuation = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+
+[slugify]
+paths = "on"
+anchors = "on"
+
+[extra]
+# Theme mode
+mode = "product"
+
+# Site metadata
+author = "raskell.io"
+github_repo = "https://github.com/raskell-io/hx"
+docs_url = "https://hx.raskell.io/docs/"
+
+# SEO metadata
+keywords = "haskell, package manager, project manager, rust, cabal, stack, fast, hx"
+
+# Social links
+github = "https://github.com/raskell-io/hx"
+
+# Product configuration
+[extra.product]
+tagline = "Extremely fast Haskell package and project manager"
+subtitle = "Written in Rust. Built for speed."
+install_command = "curl -fsSL https://get.raskell.io/hx | sh"
+install_alternatives = "Or download from <a href='https://github.com/raskell-io/hx/releases'>GitHub Releases</a>"
+
+# Navigation
+[[extra.nav_links]]
+name = "Docs"
+url = "/docs/"
+
+[[extra.nav_links]]
+name = "GitHub"
+url = "https://github.com/raskell-io/hx"
+external = true
