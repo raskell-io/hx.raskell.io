@@ -263,34 +263,7 @@
 }
 
 .hero__title {
-  font-family: "Clash Display", var(--font-sans);
-  font-size: 20rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 0.8;
   margin-bottom: 2rem;
-  text-transform: lowercase;
-
-  // Gradient text
-  background: linear-gradient(
-    135deg,
-    #cba6f7 0%,
-    #f5c2e7 25%,
-    #b4befe 50%,
-    #89b4fa 75%,
-    #cba6f7 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  @media screen and (min-width: 640px) {
-    font-size: 28rem;
-  }
-
-  @media screen and (min-width: 1024px) {
-    font-size: 36rem;
-  }
 }
 
 .hero__tagline {
@@ -667,25 +640,32 @@
 // Landing Footer
 // -----------------------------------------------------------------------------
 .landing-footer {
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 3rem;
   background: var(--color-bg-alt);
   border-top: 1px solid var(--color-border);
 }
 
 .landing-footer__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 3rem;
-  max-width: 900px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+  max-width: 1100px;
   margin: 0 auto;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--color-border-muted);
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
 }
 
 .landing-footer__group {
-  text-align: center;
-
-  @media screen and (min-width: 640px) {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .landing-footer__title {
@@ -708,10 +688,100 @@
   }
 
   a {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     color: var(--color-text-muted);
     text-decoration: none;
     transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+// Footer Bottom Section
+.landing-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.landing-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .brand-text {
+    font-size: 1.5rem;
+  }
+}
+
+.landing-footer__tagline {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.landing-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-text-muted);
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-muted);
+    border-radius: 10px;
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.landing-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  p {
+    font-size: var(--text-sm);
+    color: var(--color-text-subtle);
+    margin: 0;
+  }
+}
+
+.landing-footer__note {
+  font-size: var(--text-xs) !important;
+
+  a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 
     &:hover {
       color: var(--color-accent);
@@ -741,8 +811,8 @@
     padding: 5rem 1.5rem;
   }
 
-  .hero__title {
-    font-size: var(--text-4xl);
+  .hero__title.brand-text--hero {
+    font-size: 10rem;
   }
 
   .hero__tagline {
