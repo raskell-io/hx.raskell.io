@@ -439,28 +439,28 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   background: linear-gradient(
     135deg,
-    rgba(203, 166, 247, 0.15) 0%,
-    rgba(180, 190, 254, 0.1) 50%,
-    rgba(137, 180, 250, 0.15) 100%
-  );
-  border: 1px solid rgba(203, 166, 247, 0.25);
+    rgba(203, 166, 247, 0.25) 0%,
+    rgba(180, 190, 254, 0.2) 50%,
+    rgba(137, 180, 250, 0.25) 100%
+  ) !important;
+  border: 2px solid rgba(203, 166, 247, 0.4) !important;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-    0 2px 4px rgba(203, 166, 247, 0.1) inset;
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 4px 12px rgba(203, 166, 247, 0.2) inset !important;
 
   // Light theme
   [data-theme="light"] & {
     background: linear-gradient(
       135deg,
-      rgba(136, 57, 239, 0.08) 0%,
-      rgba(114, 135, 253, 0.06) 50%,
-      rgba(30, 102, 245, 0.08) 100%
-    );
-    border: 1px solid rgba(136, 57, 239, 0.2);
+      rgba(136, 57, 239, 0.15) 0%,
+      rgba(114, 135, 253, 0.12) 50%,
+      rgba(30, 102, 245, 0.15) 100%
+    ) !important;
+    border: 2px solid rgba(136, 57, 239, 0.3) !important;
     box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.1),
-      0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+      0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
   }
 
   @media screen and (max-width: 640px) {
