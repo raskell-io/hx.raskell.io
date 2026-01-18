@@ -700,13 +700,24 @@
   margin: 0 auto 5rem;
 }
 
+// Section title with brand gradient
 .features__title {
-  font-family: var(--font-sans);
+  font-family: "Clash Display", var(--font-sans);
   font-size: var(--text-4xl);
-  font-weight: var(--font-bold);
-  color: var(--color-heading);
+  font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: var(--tracking-tight);
+  background: linear-gradient(
+    135deg,
+    #cba6f7 0%,
+    #f5c2e7 25%,
+    #b4befe 50%,
+    #89b4fa 75%,
+    #cba6f7 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
   @media screen and (min-width: 640px) {
     font-size: var(--text-5xl);
@@ -884,13 +895,24 @@
   margin: 0 auto 4rem;
 }
 
+// Section title with brand gradient
 .benchmarks__title {
-  font-family: var(--font-sans);
+  font-family: "Clash Display", var(--font-sans);
   font-size: var(--text-4xl);
-  font-weight: var(--font-bold);
-  color: var(--color-heading);
+  font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: var(--tracking-tight);
+  background: linear-gradient(
+    135deg,
+    #cba6f7 0%,
+    #f5c2e7 25%,
+    #b4befe 50%,
+    #89b4fa 75%,
+    #cba6f7 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .benchmarks__subtitle {

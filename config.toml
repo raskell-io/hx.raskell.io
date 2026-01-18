@@ -73,7 +73,7 @@ footer_tagline = "The modern Haskell toolchain."
 footer_note = "Built with love by <a href='https://raskell.io'>raskell.io</a>"
 
 # Features section
-features_title = "Why <span class=\"brand-text\">hx</span>?"
+features_title = "Fast, Unified, Futuristic."
 features_subtitle = "Everything you need to build Haskell projects. No more juggling cabal, stack, and ghcup."
 
 [[extra.product.features]]
