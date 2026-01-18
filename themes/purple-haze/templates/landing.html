@@ -98,7 +98,7 @@
         {% if config.extra.product.features_title or config.extra.product.features_subtitle %}
         <div class="features__header">
             {% if config.extra.product.features_title %}
-            <h2 class="features__title">{{ config.extra.product.features_title }}</h2>
+            <h2 class="features__title">{{ config.extra.product.features_title | safe }}</h2>
             {% endif %}
             {% if config.extra.product.features_subtitle %}
             <p class="features__subtitle">{{ config.extra.product.features_subtitle }}</p>
@@ -126,8 +126,8 @@
 <section class="benchmarks">
     <div class="container">
         <div class="benchmarks__header">
-            <h2 class="benchmarks__title">{{ config.extra.product.benchmarks.title }}</h2>
-            <p class="benchmarks__subtitle">{{ config.extra.product.benchmarks.subtitle }}</p>
+            <h2 class="benchmarks__title">{{ config.extra.product.benchmarks.title | safe }}</h2>
+            <p class="benchmarks__subtitle">{{ config.extra.product.benchmarks.subtitle | safe }}</p>
         </div>
 
         <div class="benchmarks__grid">
@@ -136,11 +136,11 @@
                 <div class="benchmark-card__label">{{ stat.label }}</div>
                 <div class="benchmark-card__comparison">
                     <div class="benchmark-card__bar benchmark-card__bar--native">
-                        <span class="benchmark-card__bar-label">hx native</span>
+                        <span class="benchmark-card__bar-label">{{ stat.native_label | default(value="native") | safe }}</span>
                         <span class="benchmark-card__bar-value">{{ stat.native }}</span>
                     </div>
                     <div class="benchmark-card__bar benchmark-card__bar--cabal">
-                        <span class="benchmark-card__bar-label">cabal</span>
+                        <span class="benchmark-card__bar-label">{{ stat.baseline_label | default(value="baseline") }}</span>
                         <span class="benchmark-card__bar-value">{{ stat.cabal }}</span>
                     </div>
                 </div>

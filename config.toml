@@ -59,7 +59,7 @@ footer_tagline = "The modern Haskell toolchain."
 footer_note = "Built with love by <a href='https://raskell.io'>raskell.io</a>"
 
 # Features section
-features_title = "Why hx?"
+features_title = "Why <span class=\"brand-text\">hx</span>?"
 features_subtitle = "Everything you need to build Haskell projects. No more juggling cabal, stack, and ghcup."
 
 [[extra.product.features]]
@@ -96,19 +96,23 @@ icon = """<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox
 [extra.product.benchmarks]
 enabled = true
 title = "Blazingly fast"
-subtitle = "Native builds bypass Cabal overhead for simple projects"
+subtitle = "<span class=\"brand-text\">hx</span> native builds bypass Cabal overhead for simple projects"
 cta_text = "See full benchmarks"
 cta_url = "/benchmarks/"
 
 [[extra.product.benchmarks.stats]]
 label = "Cold build"
+native_label = "<span class=\"brand-text\">hx</span> native"
 native = "0.48s"
+baseline_label = "cabal"
 cabal = "2.68s"
 speedup = "5.6x"
 
 [[extra.product.benchmarks.stats]]
 label = "Incremental"
+native_label = "<span class=\"brand-text\">hx</span> native"
 native = "0.05s"
+baseline_label = "cabal"
 cabal = "0.39s"
 speedup = "7.8x"
 
