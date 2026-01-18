@@ -425,16 +425,28 @@
 
 // -----------------------------------------------------------------------------
 // Install Widget (with dropdown selector)
+// Glassmorphic style - more subtle than hero container
 // -----------------------------------------------------------------------------
 .install-widget {
   display: flex;
   align-items: stretch;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
   border-radius: 12px;
   margin-bottom: 2.5rem;
   max-width: 100%;
-  overflow: hidden;
+
+  // Glassmorphic styling
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(17, 17, 27, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  // Light theme
+  [data-theme="light"] & {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
 
   @media screen and (max-width: 640px) {
     flex-direction: column;
@@ -445,11 +457,19 @@
 .install-selector {
   position: relative;
   flex-shrink: 0;
-  border-right: 1px solid var(--color-border);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  [data-theme="light"] & {
+    border-right-color: rgba(0, 0, 0, 0.08);
+  }
 
   @media screen and (max-width: 640px) {
     border-right: none;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    [data-theme="light"] & {
+      border-bottom-color: rgba(0, 0, 0, 0.08);
+    }
   }
 }
 
@@ -458,20 +478,30 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.25rem;
-  background: var(--color-bg-elevated);
+  background: rgba(255, 255, 255, 0.05);
   border: none;
   color: var(--color-text);
   cursor: pointer;
   transition: background 0.15s ease;
   height: 100%;
+  border-radius: 11px 0 0 11px;
+
+  [data-theme="light"] & {
+    background: rgba(0, 0, 0, 0.03);
+  }
 
   &:hover {
-    background: var(--color-bg-hover);
+    background: rgba(255, 255, 255, 0.1);
+
+    [data-theme="light"] & {
+      background: rgba(0, 0, 0, 0.06);
+    }
   }
 
   @media screen and (max-width: 640px) {
     width: 100%;
     justify-content: center;
+    border-radius: 11px 11px 0 0;
   }
 }
 
@@ -500,8 +530,10 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(17, 17, 27, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   margin-top: 4px;
   padding: 0.5rem;
@@ -511,6 +543,13 @@
   transition: all 0.15s ease;
   z-index: 100;
   min-width: 140px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+  [data-theme="light"] & {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
 
   &.open {
     opacity: 1;
@@ -540,13 +579,21 @@
   }
 
   &:hover {
-    background: var(--color-bg-hover);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--color-text);
+
+    [data-theme="light"] & {
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
 
   &.active {
-    background: var(--color-bg-elevated);
+    background: rgba(203, 166, 247, 0.15);
     color: var(--ctp-mauve);
+
+    [data-theme="light"] & {
+      background: rgba(203, 166, 247, 0.2);
+    }
 
     svg {
       color: var(--ctp-mauve);
@@ -592,8 +639,12 @@
   flex-shrink: 0;
 
   &:hover {
-    background: var(--color-bg-hover);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--ctp-green);
+
+    [data-theme="light"] & {
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
 
   svg {
