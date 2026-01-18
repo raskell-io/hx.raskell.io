@@ -208,6 +208,10 @@ url = "/terms/"
 
 # Navigation
 [[extra.nav_links]]
+name = "Features"
+url = "/features/"
+
+[[extra.nav_links]]
 name = "Docs"
 url = "/docs/"
 

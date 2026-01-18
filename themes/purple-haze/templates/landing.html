@@ -57,41 +57,6 @@
         <p class="hero__subtitle">{{ config.extra.product.subtitle }}</p>
         {% endif %}
 
-        {# Install widget with dropdown #}
-        {% if config.extra.product.install_methods %}
-        <div class="install-widget">
-            <div class="install-selector">
-                <button class="install-toggle" onclick="toggleInstallDropdown()" aria-label="Select install method">
-                    <span class="install-toggle-icon" id="install-icon">
-                        {% for method in config.extra.product.install_methods %}
-                            {% if method.default %}{{ method.icon | safe }}{% endif %}
-                        {% endfor %}
-                    </span>
-                    <svg class="install-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"/>
-                    </svg>
-                </button>
-                <div class="install-dropdown" id="install-dropdown">
-                    {% for method in config.extra.product.install_methods %}
-                    <button class="install-option{% if method.default %} active{% endif %}" onclick="selectInstall('{{ method.id }}')" data-method="{{ method.id }}">
-                        {{ method.icon | safe }}
-                        {{ method.label }}
-                    </button>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="install-cmd-wrapper">
-                <code class="install-cmd" id="install-cmd">{% for method in config.extra.product.install_methods %}{% if method.default %}{{ method.command }}{% endif %}{% endfor %}</code>
-                <button class="copy-btn" id="copy-btn" onclick="copyInstallCommand()" aria-label="Copy install command">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        {% endif %}
-
         {# CTA Buttons #}
         <div class="hero__actions">
             <a href="{{ config.extra.docs_url | default(value='/docs/') }}" class="btn btn--primary btn--lg">
@@ -109,6 +74,41 @@
             </a>
         </div>
     </div>
+
+    {# Install widget - outside hero__container for independent glassmorphic effect #}
+    {% if config.extra.product.install_methods %}
+    <div class="install-widget">
+        <div class="install-selector">
+            <button class="install-toggle" onclick="toggleInstallDropdown()" aria-label="Select install method">
+                <span class="install-toggle-icon" id="install-icon">
+                    {% for method in config.extra.product.install_methods %}
+                        {% if method.default %}{{ method.icon | safe }}{% endif %}
+                    {% endfor %}
+                </span>
+                <svg class="install-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="install-dropdown" id="install-dropdown">
+                {% for method in config.extra.product.install_methods %}
+                <button class="install-option{% if method.default %} active{% endif %}" onclick="selectInstall('{{ method.id }}')" data-method="{{ method.id }}">
+                    {{ method.icon | safe }}
+                    {{ method.label }}
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="install-cmd-wrapper">
+            <code class="install-cmd" id="install-cmd">{% for method in config.extra.product.install_methods %}{% if method.default %}{{ method.command }}{% endif %}{% endfor %}</code>
+            <button class="copy-btn" id="copy-btn" onclick="copyInstallCommand()" aria-label="Copy install command">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    {% endif %}
 </section>
 
 {# Features Section #}
