@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <linearGradient
+       id="brand-gradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#cba6f7"
+         id="stop1" />
+      <stop
+         offset="25%"
+         stop-color="#f5c2e7"
+         id="stop2" />
+      <stop
+         offset="50%"
+         stop-color="#b4befe"
+         id="stop3" />
+      <stop
+         offset="75%"
+         stop-color="#89b4fa"
+         id="stop4" />
+      <stop
+         offset="100%"
+         stop-color="#cba6f7"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 244.38379,340 H 177.21582 V 236.65039 q 0,-12.61719 -1.29883,-25.04883 -1.29883,-12.61719 -4.45312,-18.55469 -3.71094,-6.86523 -10.94727,-10.01953 -7.05078,-3.15429 -19.85351,-3.15429 -9.0918,0 -18.55469,2.96875 -9.27735,2.96875 -20.22461,9.46289 V 340 H 35.086914 V 51.289062 H 101.88379 V 154.63867 q 17.8125,-13.91601 34.14062,-21.33789 16.51368,-7.42187 36.55274,-7.42187 33.76953,0 52.69531,19.66796 19.11133,19.66797 19.11133,58.81836 z m 259.24805,0 H 425.70215 L 381.1709,277.65625 335.52637,340 H 259.08105 L 341.27832,235.9082 260.37988,131.63086 h 77.92969 l 43.78906,61.23047 43.97461,-61.23047 h 76.63086 l -81.08398,102.60742 z"
+     id="text5"
+     style="font-weight:700;font-size:380px;font-family:'Clash Display', system-ui, sans-serif;letter-spacing:-20;text-anchor:middle;fill:url(#brand-gradient)"
+     aria-label="hx" />
+</svg>

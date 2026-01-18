@@ -229,12 +229,11 @@
     <link rel="preload" href="{{ get_url(path='fonts/GeistMono-Variable.woff2') | safe }}" as="font" type="font/woff2" crossorigin>
 
     {# ===== Favicon ===== #}
-    {% if config.extra.favicon %}
-    <link rel="icon" href="{{ get_url(path=config.extra.favicon) | safe }}">
-    {% endif %}
-    {% if config.extra.apple_touch_icon is defined %}
-    <link rel="apple-touch-icon" href="{{ get_url(path=config.extra.apple_touch_icon) | safe }}">
-    {% endif %}
+    <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') | safe }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='favicon-32x32.png') | safe }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='favicon-16x16.png') | safe }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='apple-touch-icon.png') | safe }}">
+    <link rel="manifest" href="{{ get_url(path='site.webmanifest') | safe }}">
 
     {# ===== RSS Feed ===== #}
     {% if config.generate_feeds %}
