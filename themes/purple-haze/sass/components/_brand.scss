@@ -51,11 +51,16 @@ $brand-gradient: linear-gradient(
 }
 
 // Hero-sized brand (for landing pages) - bold and prominent
+// Uses !important to override .hero__title styles from _layout.scss
 .brand-text--hero {
   @include brand-text-style;
   letter-spacing: -0.03em !important;
   line-height: 0.85 !important;
   font-size: 5rem !important;
+  // Override the hero__title gradient with the correct brand gradient
+  background: $brand-gradient !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
 
   @media screen and (min-width: 640px) {
     font-size: 6rem !important;
