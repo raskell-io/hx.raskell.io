@@ -53,19 +53,19 @@ $brand-gradient: linear-gradient(
 // Hero-sized brand (for landing pages) - MASSIVE, in-your-face
 .brand-text--hero {
   @include brand-text-style;
-  letter-spacing: -0.05em;
-  line-height: 0.7;
-  font-size: 28rem;
+  letter-spacing: -0.05em !important;
+  line-height: 0.7 !important;
+  font-size: 28rem !important;
 
   @media screen and (min-width: 640px) {
-    font-size: 44rem;
+    font-size: 44rem !important;
   }
 
   @media screen and (min-width: 1024px) {
-    font-size: 60rem;
+    font-size: 60rem !important;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 72rem;
+    font-size: 72rem !important;
   }
 }
