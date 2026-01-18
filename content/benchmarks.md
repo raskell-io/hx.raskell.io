@@ -16,7 +16,7 @@ hx is designed for speed. These benchmarks compare hx against cabal and stack ac
 | **GHC version** | 9.8.2 |
 | **Cabal version** | 3.12.1.0 |
 | **Stack version** | 2.15.1 |
-| **Platform** | macOS (Apple Silicon M3) |
+| **Platform** | macOS (Apple Silicon M4) |
 | **Date** | January 18, 2026 |
 
 All benchmarks run on a quiet system with minimal background processes. Times are the median of 5 runs after 2 warmup iterations.
