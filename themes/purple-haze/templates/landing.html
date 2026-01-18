@@ -32,25 +32,25 @@
     </div>
 
     <div class="hero__container">
+        {# Upper right corner: version badge + secondary tagline #}
+        <div class="hero__corner">
+            {% if config.extra.product.badge %}
+            <a href="{{ config.extra.product.badge_url | default(value='#') }}" class="hero__badge hero__badge--gradient" target="_blank" rel="noopener">
+                {{ config.extra.product.badge }}
+            </a>
+            {% endif %}
+            {% if config.extra.product.tagline_sub %}
+            <p class="hero__tagline-sub">{{ config.extra.product.tagline_sub }}</p>
+            {% endif %}
+        </div>
+
         {# Main heading - massive, in-your-face #}
         <h1 class="hero__title brand-text--hero">
             {{ config.title }}
         </h1>
 
-        {# Version badge with subtle gradient, links to GitHub #}
-        {% if config.extra.product.badge %}
-        <a href="{{ config.extra.product.badge_url | default(value='#') }}" class="hero__badge hero__badge--gradient" target="_blank" rel="noopener">
-            {{ config.extra.product.badge }}
-        </a>
-        {% endif %}
-
-        {# Tagline - brand font, no gradient #}
+        {# Main tagline - Clash Display, directly below hx #}
         <p class="hero__tagline hero__tagline--brand">{{ config.extra.product.tagline | default(value=config.description) }}</p>
-
-        {# Secondary tagline #}
-        {% if config.extra.product.tagline_sub %}
-        <p class="hero__tagline-sub">{{ config.extra.product.tagline_sub }}</p>
-        {% endif %}
 
         {# Subtitle if provided #}
         {% if config.extra.product.subtitle %}

@@ -225,8 +225,7 @@
     {% endif %}
 
     {# ===== Preload fonts ===== #}
-    <link rel="preload" href="{{ get_url(path='fonts/Geist-Variable.woff2') | safe }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ get_url(path='fonts/GeistMono-Variable.woff2') | safe }}" as="font" type="font/woff2" crossorigin>
+    {# Fonts loaded from Fontshare CDN, no local preload needed #}
 
     {# ===== Favicon ===== #}
     {% if config.extra.favicon %}

@@ -1,11 +1,14 @@
 // =============================================================================
 // Font Face Definitions
-// Geist Sans + Geist Mono - Modern, technical typeface (Vercel)
-// Unbounded - Bold display font for headlines
+// Satoshi - Modern geometric sans-serif for body text (Fontshare)
+// Geist Mono - Technical monospace for code (Vercel)
+// Clash Display - Bold display font for headlines (Fontshare)
 // =============================================================================
 
-// Import from Vercel's CDN
-@import url("https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css");
+// Satoshi: Clean, modern geometric sans-serif (Fontshare)
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap");
+
+// Geist Mono for code (Vercel CDN)
 @import url("https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css");
 
 // Display font - Clash Display: bold, modern, striking (Fontshare)

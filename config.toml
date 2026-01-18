@@ -51,7 +51,7 @@ github = "https://github.com/raskell-io/hx"
 [extra.product]
 tagline = "Haskell, finally fast"
 tagline_sub = "Fast, unified, futuristic"
-subtitle = "A fast, opinionated, next-gen toolchain for Haskell."
+subtitle = "A fast, opinionated, next-gen toolchain for Haskell. Built in Rust."
 gradient_title = true
 badge = "v0.4.0"
 badge_url = "https://github.com/raskell-io/hx"
