@@ -51,15 +51,22 @@ $brand-gradient: linear-gradient(
 }
 
 // Hero-sized brand (for landing pages) - bold and prominent
-// Uses !important to override .hero__title styles from _layout.scss
+// Uses mauve/blue/teal gradient for more impact
 .brand-text--hero {
-  @include brand-text-style;
+  font-family: "Clash Display", var(--font-sans);
+  font-weight: 700;
+  text-transform: lowercase;
   letter-spacing: -0.03em !important;
   line-height: 0.85 !important;
   font-size: 5rem !important;
-  // Override the hero__title gradient with the correct brand gradient
-  background: $brand-gradient !important;
+  background: linear-gradient(
+    135deg,
+    var(--ctp-mauve) 0%,
+    var(--ctp-blue) 50%,
+    var(--ctp-teal) 100%
+  ) !important;
   -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
 
   @media screen and (min-width: 640px) {
