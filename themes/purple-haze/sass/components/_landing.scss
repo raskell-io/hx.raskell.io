@@ -521,8 +521,8 @@
   color: var(--ctp-mauve);
 
   svg {
-    width: 18px;
-    height: 18px;
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -612,24 +612,32 @@
 }
 
 .install-cmd-wrapper {
-  display: flex;
-  align-items: center;
+  position: relative;
   flex: 1 1 0;
   min-width: 0;
-  padding: 0 1.5rem;
-  gap: 1rem;
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0 11px 11px 0;
+
+  [data-theme="light"] & {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  @media screen and (max-width: 640px) {
+    border-radius: 0 0 11px 11px;
+  }
 }
 
 .install-cmd {
-  flex: 1;
+  display: block;
+  width: 100%;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 1rem 0;
+  padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+  background: transparent;
 
   @media screen and (min-width: 640px) {
     font-size: var(--text-base);
@@ -637,30 +645,27 @@
 }
 
 .copy-btn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.25rem;
   background: transparent;
   border: none;
-  border-radius: 6px;
   color: var(--color-text-muted);
   cursor: pointer;
-  transition: all 0.15s ease;
-  flex-shrink: 0;
+  transition: color 0.15s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
     color: var(--ctp-green);
-
-    [data-theme="light"] & {
-      background: rgba(0, 0, 0, 0.05);
-    }
   }
 
   svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 }
 
