@@ -2,14 +2,12 @@
 // Brand Typography - Consistent "hx" styling across the site
 // =============================================================================
 
-// Shared brand gradient
+// Shared brand gradient - purple to blue to Haskell purple
 $brand-gradient: linear-gradient(
   135deg,
   #cba6f7 0%,
-  #f5c2e7 25%,
-  #b4befe 50%,
-  #89b4fa 75%,
-  #cba6f7 100%
+  #89b4fa 50%,
+  #5e5086 100%
 );
 
 // Mixin for brand text styling
@@ -51,7 +49,7 @@ $brand-gradient: linear-gradient(
 }
 
 // Hero-sized brand (for landing pages) - bold and prominent
-// Uses mauve/blue/teal gradient for more impact
+// Uses same gradient as regular brand text for consistency
 .brand-text--hero {
   font-family: "Clash Display", var(--font-sans);
   font-weight: 700;
@@ -59,12 +57,8 @@ $brand-gradient: linear-gradient(
   letter-spacing: -0.03em !important;
   line-height: 0.85 !important;
   font-size: 5rem !important;
-  background: linear-gradient(
-    135deg,
-    var(--ctp-mauve) 0%,
-    var(--ctp-blue) 50%,
-    var(--ctp-teal) 100%
-  ) !important;
+  background: $brand-gradient !important;
+  background-size: 50% 100% !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;

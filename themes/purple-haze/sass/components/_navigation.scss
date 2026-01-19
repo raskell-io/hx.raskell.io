@@ -8,16 +8,8 @@
 
 .header {
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
-
-  @media (min-width: 768px) {
-    padding: 1rem 2rem;
-  }
 
   // Fixed header (docs mode default)
   .layout--fixed-header & {
@@ -30,6 +22,18 @@
   .layout:not(.layout--fixed-header) & {
     position: relative;
   }
+}
+
+// Inner container to constrain header content width
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__left {
@@ -411,6 +415,11 @@
   }
 }
 
+// Darker navbar text in light theme
+[data-theme="light"] .header__link {
+  color: #4c4f69 !important;
+}
+
 .header__actions {
   display: flex;
   align-items: center;
@@ -441,6 +450,11 @@
   color: var(--color-text-secondary);
   border-radius: 10px;
   transition: all 0.2s ease;
+
+  // Darker icons in light theme
+  [data-theme="light"] & {
+    color: var(--color-text);
+  }
 
   &:hover {
     color: var(--color-text);

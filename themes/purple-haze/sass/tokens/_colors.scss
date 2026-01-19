@@ -147,13 +147,14 @@ $ctp-latte: (
 // -----------------------------------------------------------------------------
 [data-theme="light"] {
   --color-heading: var(--ctp-text);
-  --color-bg: var(--ctp-base);
-  --color-bg-alt: var(--ctp-mantle);
-  --color-bg-surface: var(--ctp-crust);
-  --color-bg-elevated: var(--ctp-surface0);
-  --color-bg-overlay: var(--ctp-surface1);
-  --color-bg-hover: var(--ctp-surface0);
-  --color-border: var(--ctp-surface0);
-  --color-border-muted: var(--ctp-surface1);
+  // Pure white and subtle grays for clean sections
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7fa;
+  --color-bg-surface: #ffffff;
+  --color-bg-elevated: #f0f2f5;
+  --color-bg-overlay: #e8eaed;
+  --color-bg-hover: #f0f2f5;
+  --color-border: #e0e3e8;
+  --color-border-muted: #eaecf0;
   --color-primary-text: #ffffff;
 }

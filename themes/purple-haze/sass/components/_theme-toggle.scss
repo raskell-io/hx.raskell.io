@@ -13,15 +13,19 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: none;
   border-radius: 8px;
   cursor: pointer;
   color: var(--color-text-muted);
   transition: all 0.15s ease;
 
+  // Darker icon in light theme
+  [data-theme="light"] & {
+    color: var(--color-text);
+  }
+
   &:hover {
     color: var(--color-text);
-    border-color: var(--color-text-muted);
     background: var(--color-bg-hover);
   }
 

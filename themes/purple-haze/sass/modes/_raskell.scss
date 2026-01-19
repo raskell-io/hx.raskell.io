@@ -140,7 +140,7 @@
     }
 
     .container {
-        max-width: 830px;
+        max-width: 900px;
         padding: 0 1.5rem;
         margin-left: auto;
         margin-right: auto;
@@ -242,6 +242,13 @@
 
     .emoji {
         margin: 0 0.4rem 0 0.1rem;
+    }
+
+    // Navbar container - constrain to match hero section width
+    .navbar .container {
+        max-width: 900px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .navbar {
