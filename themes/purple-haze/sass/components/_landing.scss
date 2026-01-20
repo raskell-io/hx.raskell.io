@@ -1949,6 +1949,12 @@ $bhc-text-dim: #94a3b8;
   }
 }
 
+.bhc-promo__brand-inline {
+  font-family: 'Clash Display', 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  color: $bhc-accent;
+}
+
 .bhc-promo__features {
   display: flex;
   flex-direction: column;
