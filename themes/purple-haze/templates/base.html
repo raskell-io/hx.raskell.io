@@ -115,65 +115,123 @@
         "@graph": [
             {
                 "@type": "WebSite",
-                "@id": "{{ config.base_url | safe }}#website",
+                "@id": "{{ config.base_url | safe }}/#website",
                 "url": "{{ config.base_url | safe }}",
                 "name": "{{ config.title }}",
                 "description": "{{ config.description }}",
-                {% if config.extra.author is defined %}
-                "author": {
-                    "@type": "{% if config.extra.author_type is defined %}{{ config.extra.author_type }}{% else %}Person{% endif %}",
-                    "name": "{{ config.extra.author }}"
+                "publisher": {
+                    "@id": "{{ config.base_url | safe }}/#organization"
                 },
+                "inLanguage": "{{ lang | default(value='en') }}",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "{{ config.base_url | safe }}/?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "{{ config.base_url | safe }}/#software",
+                "name": "{{ config.title }}",
+                "description": "{{ config.description }}",
+                "url": "{{ config.base_url | safe }}",
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "Linux, macOS, Windows",
+                {% if config.extra.product.badge is defined %}
+                "softwareVersion": "{{ config.extra.product.badge }}",
                 {% endif %}
-                "inLanguage": "{{ lang | default(value='en') }}"
+                "downloadUrl": "{{ config.extra.github | default(value='') }}/releases",
+                "installUrl": "{{ config.base_url | safe }}/docs/installation/",
+                {% if config.extra.og_image is defined %}
+                "screenshot": "{{ get_url(path=config.extra.og_image) | safe }}",
+                {% endif %}
+                "author": {
+                    "@id": "{{ config.base_url | safe }}/#organization"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "license": "https://opensource.org/licenses/MIT",
+                "programmingLanguage": "Rust",
+                "codeRepository": "{{ config.extra.github | default(value='') }}",
+                "featureList": [
+                    "Unified package and project management",
+                    "Automatic GHC installation and version switching",
+                    "Deterministic builds with TOML lockfiles",
+                    "Drop-in Cabal compatibility",
+                    "Watch mode and coverage reports",
+                    "Plugin system with Steel (Scheme)"
+                ]
+            },
+            {
+                "@type": "Organization",
+                "@id": "{{ config.base_url | safe }}/#organization",
+                "name": "{{ config.extra.author | default(value=config.title) }}",
+                "url": "{{ config.base_url | safe }}"
+                {% if config.extra.og_image is defined %},
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ get_url(path=config.extra.og_image) | safe }}",
+                    "width": {{ config.extra.og_image_width | default(value=1200) }},
+                    "height": {{ config.extra.og_image_height | default(value=630) }}
+                }
+                {% endif %}
             },
             {
                 "@type": "WebPage",
-                "@id": "{% if current_url is defined %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}#webpage",
+                "@id": "{% if current_url is defined %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}/#webpage",
                 "url": "{% if current_url is defined %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}",
                 "name": "{% if page.title is defined %}{{ page.title }}{% elif section.title is defined %}{{ section.title }}{% else %}{{ config.title }}{% endif %}",
                 "isPartOf": {
-                    "@id": "{{ config.base_url | safe }}#website"
+                    "@id": "{{ config.base_url | safe }}/#website"
                 },
                 "description": "{% if page.description is defined %}{{ page.description }}{% elif section.description is defined %}{{ section.description }}{% else %}{{ config.description }}{% endif %}",
                 "inLanguage": "{{ lang | default(value='en') }}"
                 {% if page.date is defined and page.date %},
-                "datePublished": "{{ page.date | date(format='%Y-%m-%d') }}"
+                "datePublished": "{{ page.date | date(format='%Y-%m-%dT%H:%M:%S') }}+00:00"
                 {% endif %}
                 {% if page.updated is defined and page.updated %},
-                "dateModified": "{{ page.updated | date(format='%Y-%m-%d') }}"
+                "dateModified": "{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S') }}+00:00"
                 {% endif %}
             }
-            {% if page %}
-            ,{
+            {% if page %},
+            {
                 "@type": "Article",
-                "@id": "{{ current_url | safe }}#article",
-                "isPartOf": {
-                    "@id": "{{ current_url | safe }}#webpage"
-                },
+                "@id": "{{ current_url | safe }}/#article",
                 "headline": "{{ page.title }}",
-                {% if page.description is defined and page.description %}
-                "description": "{{ page.description }}",
-                {% endif %}
-                {% if page.date is defined and page.date %}
-                "datePublished": "{{ page.date | date(format='%Y-%m-%dT%H:%M:%S') }}",
-                {% endif %}
-                {% if page.updated is defined and page.updated %}
-                "dateModified": "{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S') }}",
-                {% endif %}
-                {% if config.extra.author is defined %}
-                "author": {
-                    "@type": "{% if config.extra.author_type is defined %}{{ config.extra.author_type }}{% else %}Person{% endif %}",
-                    "name": "{{ config.extra.author }}"
+                "description": "{{ page.description | default(value=config.description) }}",
+                "url": "{{ current_url | safe }}",
+                "isPartOf": {
+                    "@id": "{{ current_url | safe }}/#webpage"
                 },
+                "mainEntityOfPage": {
+                    "@id": "{{ current_url | safe }}/#webpage"
+                },
+                "inLanguage": "{{ lang | default(value='en') }}",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "{{ config.base_url | safe }}/#organization"
+                },
+                "publisher": {
+                    "@id": "{{ config.base_url | safe }}/#organization"
+                }
+                {% if page.date is defined and page.date %},
+                "datePublished": "{{ page.date | date(format='%Y-%m-%dT%H:%M:%S') }}+00:00"
                 {% endif %}
-                {% if page.taxonomies.tags is defined %}
-                "keywords": "{{ page.taxonomies.tags | join(sep=', ') }}",
+                {% if page.updated is defined and page.updated %},
+                "dateModified": "{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S') }}+00:00"
                 {% endif %}
-                {% if page.word_count is defined %}
-                "wordCount": {{ page.word_count }},
+                {% if page.taxonomies.tags is defined and page.taxonomies.tags %},
+                "keywords": "{{ page.taxonomies.tags | join(sep=', ') }}"
                 {% endif %}
-                "inLanguage": "{{ lang | default(value='en') }}"
+                {% if page.word_count is defined %},
+                "wordCount": {{ page.word_count }}
+                {% endif %}
             }
             {% endif %}
         ]
@@ -228,11 +286,20 @@
     {# Fonts loaded from Fontshare CDN, no local preload needed #}
 
     {# ===== Favicon ===== #}
-    {% if config.extra.favicon %}
-    <link rel="icon" href="{{ get_url(path=config.extra.favicon) | safe }}">
+    {% if config.extra.favicon is defined %}
+    <link rel="icon" href="{{ get_url(path=config.extra.favicon) | safe }}" sizes="48x48">
+    {% endif %}
+    {% if config.extra.favicon_png is defined %}
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path=config.extra.favicon_png) | safe }}">
+    {% endif %}
+    {% if config.extra.icon_192 is defined %}
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ get_url(path=config.extra.icon_192) | safe }}">
     {% endif %}
     {% if config.extra.apple_touch_icon is defined %}
-    <link rel="apple-touch-icon" href="{{ get_url(path=config.extra.apple_touch_icon) | safe }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path=config.extra.apple_touch_icon) | safe }}">
+    {% endif %}
+    {% if config.extra.webmanifest is defined %}
+    <link rel="manifest" href="{{ get_url(path=config.extra.webmanifest) | safe }}">
     {% endif %}
 
     {# ===== RSS Feed ===== #}

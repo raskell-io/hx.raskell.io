@@ -38,11 +38,24 @@ mode = "product"
 
 # Site metadata
 author = "raskell.io"
+author_type = "Organization"
 github_repo = "https://github.com/raskell-io/hx"
 docs_url = "https://hx.raskell.io/docs/"
 
 # SEO metadata
 keywords = "haskell, package manager, project manager, rust, cabal, stack, fast, hx"
+og_image = "img/og-image.png"
+og_image_width = 1200
+og_image_height = 630
+og_image_alt = "hx - An extremely fast Haskell package and project manager"
+twitter_site = "@raskell_io"
+
+# Favicon
+favicon = "favicon.ico"
+favicon_png = "favicon.png"
+icon_192 = "icon-192.png"
+apple_touch_icon = "apple-touch-icon.png"
+webmanifest = "site.webmanifest"
 
 # Social links
 github = "https://github.com/raskell-io/hx"
