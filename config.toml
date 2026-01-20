@@ -147,7 +147,6 @@ hx_percent = "13"
 [extra.social]
 github = "https://github.com/raskell-io/hx"
 twitter = "https://x.com/raskell_io"
-discord = "https://discord.gg/raskell"
 
 # Footer link groups
 [[extra.product.footer_links]]
@@ -189,10 +188,6 @@ external = true
 
 [[extra.product.footer_links]]
 title = "Community"
-[[extra.product.footer_links.links]]
-text = "Discord"
-url = "https://discord.gg/raskell"
-external = true
 [[extra.product.footer_links.links]]
 text = "Twitter / X"
 url = "https://x.com/raskell_io"
