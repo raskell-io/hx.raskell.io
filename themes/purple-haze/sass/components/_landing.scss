@@ -1723,4 +1723,352 @@
   .content {
     padding: 4rem 1.5rem;
   }
+
+  .bhc-promo__content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bhc-promo__features {
+    gap: 0.75rem;
+  }
+
+  .bhc-promo__feature {
+    font-size: 0.8rem;
+  }
+}
+
+// =============================================================================
+// BHC Promo Section - Brutalist Blueprint Style
+// Inspired by bhc.raskell.io design language
+// =============================================================================
+
+// BHC color palette (from brutalist-blueprint)
+$bhc-accent: #60a5fa;
+$bhc-accent-dim: #3b82f6;
+$bhc-bg-dark: #0a0f1a;
+$bhc-bg-surface: #0f172a;
+$bhc-border: #1e3a5f;
+$bhc-text: #e2e8f0;
+$bhc-text-dim: #94a3b8;
+
+.bhc-promo {
+  position: relative;
+  padding: 6rem 2rem;
+  background: $bhc-bg-dark;
+  overflow: hidden;
+
+  // Light theme adjustments
+  [data-theme="light"] & {
+    background: #f1f5f9;
+
+    .bhc-promo__rail {
+      background: linear-gradient(to bottom, rgba($bhc-accent, 0.15), transparent 30%, transparent 70%, rgba($bhc-accent, 0.15));
+    }
+
+    .bhc-promo__frame {
+      background: white;
+      border-color: rgba($bhc-accent-dim, 0.2);
+    }
+
+    .bhc-promo__label {
+      color: $bhc-accent-dim;
+    }
+
+    .bhc-promo__title-brand {
+      background: linear-gradient(135deg, $bhc-accent-dim 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .bhc-promo__title-sub {
+      color: #475569;
+    }
+
+    .bhc-promo__description {
+      color: #334155;
+    }
+
+    .bhc-promo__feature {
+      color: #475569;
+      border-color: rgba($bhc-accent-dim, 0.2);
+    }
+
+    .bhc-promo__feature-icon {
+      color: $bhc-accent-dim;
+    }
+
+    .bhc-promo__terminal {
+      background: #1e293b;
+    }
+  }
+}
+
+// Vertical rails (like bhc.raskell.io)
+.bhc-promo__rails {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.bhc-promo__rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, $bhc-border 20%, $bhc-border 80%, transparent);
+
+  &--left {
+    left: calc(50% - 400px);
+  }
+
+  &--right {
+    right: calc(50% - 400px);
+  }
+
+  @media (max-width: 900px) {
+    &--left {
+      left: 1rem;
+    }
+    &--right {
+      right: 1rem;
+    }
+  }
+}
+
+.bhc-promo__container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bhc-promo__frame {
+  background: $bhc-bg-surface;
+  border: 1px solid $bhc-border;
+  position: relative;
+
+  // Corner accents (brutalist style)
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $bhc-accent;
+  }
+
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+  }
+}
+
+.bhc-promo__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $bhc-border;
+}
+
+.bhc-promo__label {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: $bhc-accent;
+  text-transform: uppercase;
+}
+
+.bhc-promo__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (min-width: 640px) {
+    padding: 2.5rem;
+  }
+}
+
+.bhc-promo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bhc-promo__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.bhc-promo__title-brand {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, $bhc-accent 0%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+
+  @media (min-width: 640px) {
+    font-size: 3rem;
+  }
+}
+
+.bhc-promo__title-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: $bhc-text-dim;
+  letter-spacing: 0.02em;
+}
+
+.bhc-promo__description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $bhc-text;
+  margin: 0;
+
+  strong {
+    color: $bhc-accent;
+    font-weight: 600;
+  }
+}
+
+.bhc-promo__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.bhc-promo__feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: $bhc-text-dim;
+  padding: 0.5rem 0.75rem;
+  border-left: 2px solid $bhc-border;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: $bhc-accent;
+    color: $bhc-text;
+  }
+}
+
+.bhc-promo__feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $bhc-accent;
+  flex-shrink: 0;
+}
+
+// Terminal widget (brutalist style)
+.bhc-promo__terminal {
+  background: #0d1117;
+  border: 1px solid $bhc-border;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  overflow: hidden;
+}
+
+.bhc-promo__terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid $bhc-border;
+}
+
+.bhc-promo__terminal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $bhc-border;
+
+  &:nth-child(1) { background: #f87171; }
+  &:nth-child(2) { background: #fbbf24; }
+  &:nth-child(3) { background: #4ade80; }
+}
+
+.bhc-promo__terminal-title {
+  font-size: 0.7rem;
+  color: $bhc-text-dim;
+  margin-left: auto;
+  text-transform: lowercase;
+}
+
+.bhc-promo__terminal-body {
+  padding: 1rem;
+
+  code {
+    font-size: 0.85rem;
+    color: $bhc-text;
+    background: none;
+  }
+}
+
+.bhc-promo__terminal-prompt {
+  color: $bhc-accent;
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.bhc-promo__cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bhc-promo__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid $bhc-accent;
+  color: $bhc-accent;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $bhc-accent;
+    color: $bhc-bg-dark;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  [data-theme="light"] & {
+    border-color: $bhc-accent-dim;
+    color: $bhc-accent-dim;
+
+    &:hover {
+      background: $bhc-accent-dim;
+      color: white;
+    }
+  }
 }
