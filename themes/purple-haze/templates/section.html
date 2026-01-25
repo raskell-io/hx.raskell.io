@@ -11,7 +11,46 @@
 {% endblock %}
 
 {% block content %}
-{% if mode == "site" or mode == "blog" or mode == "product" %}
+{% if mode == "product" %}
+{# Product mode blog listing - matches site styling #}
+<article class="article">
+    <header class="article__header article__header--docs">
+        <h1>{{ section.title }}</h1>
+        {% if section.description %}
+        <p class="article__description">{{ section.description }}</p>
+        {% endif %}
+    </header>
+
+    <div class="article__content">
+        <div class="blog-posts">
+            {% for page in section.pages | sort(attribute="date") | reverse %}
+            <a href="{{ page.permalink | safe }}" class="blog-post-card">
+                <div class="blog-post-card__content">
+                    <time class="blog-post-card__date">{{ page.date | date(format="%B %d, %Y") }}</time>
+                    <h2 class="blog-post-card__title">{{ page.title }}</h2>
+                    {% if page.description %}
+                    <p class="blog-post-card__description">{{ page.description }}</p>
+                    {% endif %}
+                    {% if page.taxonomies.tags %}
+                    <div class="blog-post-card__tags">
+                        {% for tag in page.taxonomies.tags %}
+                        <span class="blog-post-card__tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="blog-post-card__arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</article>
+
+{% elif mode == "site" or mode == "blog" %}
 {# raskell.io style articles listing #}
 <header>
     <div class="container">
