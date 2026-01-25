@@ -80,7 +80,7 @@ features_subtitle = "Everything you need to build Haskell projects. No more jugg
 [[extra.product.install_methods]]
 id = "script"
 label = "Script"
-command = "curl -fsSL https://raw.githubusercontent.com/raskell-io/hx/main/install.sh | sh"
+command = "curl -fsSL https://hx.raskell.io/install.sh | sh"
 icon = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 8 4 4-4 4"/></svg>"""
 default = true
 
