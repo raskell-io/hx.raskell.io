@@ -3,7 +3,7 @@ title = "Blog"
 description = "News, tutorials, and updates from the hx project"
 template = "section.html"
 sort_by = "date"
-paginate_by = 10
+render = true
 +++
 
 News, tutorials, and updates from the hx project.

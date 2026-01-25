@@ -128,6 +128,5 @@ For general-purpose Haskell development, GHC remains the recommended choice.
 
 ## Resources
 
-- [BHC Documentation](https://github.com/bhc-lang/bhc)
 - [hx Configuration Reference](/docs/configuration/)
 - [hx CLI Reference](/docs/cli/)
