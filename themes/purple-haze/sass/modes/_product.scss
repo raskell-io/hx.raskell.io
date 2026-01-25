@@ -989,8 +989,8 @@
       margin-bottom: var(--space-4);
     }
 
-    // Links
-    a {
+    // Links (exclude blog post cards which are styled separately)
+    a:not(.blog-post-card) {
       color: var(--color-link);
       text-decoration: underline;
       text-underline-offset: 2px;
