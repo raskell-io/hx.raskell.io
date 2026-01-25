@@ -157,20 +157,20 @@ twitter = "https://x.com/raskell_io"
 [[extra.product.footer_links]]
 title = "Documentation"
 [[extra.product.footer_links.links]]
-text = "Getting Started"
-url = "/docs/getting-started/"
+text = "Quick Start"
+url = "/docs/quickstart"
 [[extra.product.footer_links.links]]
 text = "Installation"
-url = "/docs/installation/"
+url = "/docs/installation"
 [[extra.product.footer_links.links]]
 text = "CLI Reference"
-url = "/docs/cli/"
+url = "/docs/commands"
 [[extra.product.footer_links.links]]
 text = "Configuration"
-url = "/docs/configuration/"
+url = "/docs/configuration"
 [[extra.product.footer_links.links]]
-text = "Migration Guide"
-url = "/docs/migration/"
+text = "Guides"
+url = "/docs/guides"
 
 [[extra.product.footer_links]]
 title = "Resources"

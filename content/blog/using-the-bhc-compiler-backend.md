@@ -128,5 +128,5 @@ For general-purpose Haskell development, GHC remains the recommended choice.
 
 ## Resources
 
-- [hx Configuration Reference](/docs/configuration/)
-- [hx CLI Reference](/docs/cli/)
+- [hx Configuration Reference](/docs/configuration)
+- [hx CLI Reference](/docs/commands)

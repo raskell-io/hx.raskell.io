@@ -47,7 +47,10 @@ jobs:
       - name: Copy docs to public
         run: |
           mkdir -p ./public/docs
-          cp -r /tmp/docs/public/* ./public/docs/
+          # Copy docs landing page (from content/_index.md)
+          cp /tmp/docs/public/index.html ./public/docs/
+          # Copy docs subsections directly, flattening the nested docs/docs structure
+          cp -r /tmp/docs/public/docs/* ./public/docs/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

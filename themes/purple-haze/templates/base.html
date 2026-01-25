@@ -144,7 +144,7 @@
                 "softwareVersion": "{{ config.extra.product.badge }}",
                 {% endif %}
                 "downloadUrl": "{{ config.extra.github | default(value='') }}/releases",
-                "installUrl": "{{ config.base_url | safe }}/docs/installation/",
+                "installUrl": "{{ config.base_url | safe }}/docs/installation",
                 {% if config.extra.og_image is defined %}
                 "screenshot": "{{ get_url(path=config.extra.og_image) | safe }}",
                 {% endif %}
