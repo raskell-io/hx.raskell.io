@@ -32,6 +32,11 @@ dark_theme = "catppuccin-mocha"
 paths = "on"
 anchors = "on"
 
+# Taxonomies for blog
+[[taxonomies]]
+name = "tags"
+feed = false
+
 [extra]
 # Theme mode
 mode = "product"
@@ -66,7 +71,7 @@ tagline = "Haskell, finally fast"
 tagline_sub = "Fast, unified, futuristic"
 subtitle = "A fast, opinionated, next-gen toolchain for Haskell. Built in Rust."
 gradient_title = true
-badge = "v0.4.0"
+badge = "v0.4.2"
 badge_url = "https://github.com/raskell-io/hx"
 features_title = "Why hx?"
 features_subtitle = "Everything you need to build Haskell projects. No more juggling cabal, stack, and ghcup."
@@ -198,8 +203,7 @@ url = "https://github.com/raskell-io/hx/discussions"
 external = true
 [[extra.product.footer_links.links]]
 text = "Blog"
-url = "https://raskell.io/blog/"
-external = true
+url = "/blog/"
 
 [[extra.product.footer_links]]
 title = "Legal"
@@ -222,6 +226,10 @@ url = "/features/"
 [[extra.nav_links]]
 name = "Docs"
 url = "/docs/"
+
+[[extra.nav_links]]
+name = "Blog"
+url = "/blog/"
 
 [[extra.nav_links]]
 name = "Benchmarks"
