@@ -416,7 +416,7 @@
 <script>
     const installCommands = {
         {% for method in config.extra.product.install_methods %}
-        '{{ method.id }}': '{{ method.command }}',
+        '{{ method.id }}': '{{ method.command | safe }}',
         {% endfor %}
     };
 
