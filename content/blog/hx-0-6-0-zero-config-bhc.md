@@ -1,5 +1,5 @@
 +++
-title = "hx 0.6.0: Zero-Config BHC Experience"
+title = "Zero-Config BHC Experience"
 description = "hx 0.6.0 makes going from zero to a running BHC project effortless — auto-detected backends, bundled toolchain installs, and smarter doctor checks"
 date = 2026-02-03
 template = "page.html"
@@ -11,7 +11,7 @@ tags = ["bhc", "release", "toolchain"]
 author = "raskell.io"
 +++
 
-hx 0.6.0 focuses on a single goal: getting from nothing to a running BHC project with as few steps as possible. If BHC is your compiler, hx now handles the rest automatically.
+**hx 0.6.0** focuses on a single goal: getting from nothing to a running BHC project with as few steps as possible. If BHC is your compiler, hx now handles the rest automatically.
 
 ## One Command to Rule Them All
 
@@ -91,7 +91,7 @@ When something is off, doctor tells you exactly what to do:
 
 ## The Full Zero-Config Flow
 
-Here's what going from zero to running looks like with hx 0.6.0:
+Here's what going from zero to running looks like:
 
 ```bash
 # Install everything in one shot
