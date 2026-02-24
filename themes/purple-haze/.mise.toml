@@ -3,8 +3,8 @@ zola = "0.22"
 
 [tasks.serve]
 description = "Start local development server (requires a site using this theme)"
-run = "echo 'This is a theme repo. Use mise serve in a site repo like hx.raskell.io'"
+run = "echo 'This is a theme repo. Use mise serve in a site repo like hx.arcanist.sh'"
 
 [tasks.build]
 description = "Build (requires a site using this theme)"
-run = "echo 'This is a theme repo. Use mise build in a site repo like hx.raskell.io'"
+run = "echo 'This is a theme repo. Use mise build in a site repo like hx.arcanist.sh'"

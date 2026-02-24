@@ -1,7 +1,7 @@
 # Zola configuration for hx website
 # https://www.getzola.org/documentation/getting-started/configuration/
 
-base_url = "https://hx.raskell.io"
+base_url = "https://hx.arcanist.sh"
 title = "hx"
 description = "An extremely fast Haskell package and project manager, written in Rust."
 default_language = "en"
@@ -42,10 +42,10 @@ feed = false
 mode = "product"
 
 # Site metadata
-author = "raskell.io"
+author = "arcanist.sh"
 author_type = "Organization"
-github_repo = "https://github.com/raskell-io/hx"
-docs_url = "https://hx.raskell.io/docs/"
+github_repo = "https://github.com/arcanist-sh/hx"
+docs_url = "https://hx.arcanist.sh/docs/"
 
 # SEO metadata
 keywords = "haskell, package manager, project manager, rust, cabal, stack, fast, hx"
@@ -63,7 +63,7 @@ apple_touch_icon = "apple-touch-icon.png"
 webmanifest = "site.webmanifest"
 
 # Social links
-github = "https://github.com/raskell-io/hx"
+github = "https://github.com/arcanist-sh/hx"
 
 # Product configuration
 [extra.product]
@@ -72,7 +72,7 @@ tagline_sub = "Fast, unified, futuristic"
 subtitle = "A fast, opinionated, next-gen toolchain for Haskell. Built in Rust."
 gradient_title = true
 badge = "v0.4.3"
-badge_url = "https://github.com/raskell-io/hx"
+badge_url = "https://github.com/arcanist-sh/hx"
 features_title = "Why hx?"
 features_subtitle = "Everything you need to build Haskell projects. No more juggling cabal, stack, and ghcup."
 
@@ -80,7 +80,7 @@ features_subtitle = "Everything you need to build Haskell projects. No more jugg
 [[extra.product.install_methods]]
 id = "script"
 label = "Script"
-command = "curl -fsSL https://hx.raskell.io/install.sh | sh"
+command = "curl -fsSL https://hx.arcanist.sh/install.sh | sh"
 icon = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 8 4 4-4 4"/></svg>"""
 default = true
 
@@ -93,10 +93,10 @@ icon = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox
 [[extra.product.install_methods]]
 id = "aqua"
 label = "aqua"
-command = "aqua g -i raskell-io/hx"
+command = "aqua g -i arcanist-sh/hx"
 icon = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>"""
 footer_tagline = "The modern Haskell toolchain."
-footer_note = "Built with love by <a href='https://raskell.io'>raskell.io</a>"
+footer_note = "Built with love by <a href='https://arcanist.sh'>arcanist.sh</a>"
 
 [[extra.product.features]]
 title = "Batteries included"
@@ -156,7 +156,7 @@ hx_percent = "13"
 
 # Social links
 [extra.social]
-github = "https://github.com/raskell-io/hx"
+github = "https://github.com/arcanist-sh/hx"
 twitter = "https://x.com/raskell_io"
 
 # Footer link groups
@@ -182,19 +182,19 @@ url = "/docs/guides"
 title = "Resources"
 [[extra.product.footer_links.links]]
 text = "GitHub"
-url = "https://github.com/raskell-io/hx"
+url = "https://github.com/arcanist-sh/hx"
 external = true
 [[extra.product.footer_links.links]]
 text = "Changelog"
-url = "https://github.com/raskell-io/hx/blob/main/CHANGELOG.md"
+url = "https://github.com/arcanist-sh/hx/blob/main/CHANGELOG.md"
 external = true
 [[extra.product.footer_links.links]]
 text = "Contributing"
-url = "https://github.com/raskell-io/hx/blob/main/CONTRIBUTING.md"
+url = "https://github.com/arcanist-sh/hx/blob/main/CONTRIBUTING.md"
 external = true
 [[extra.product.footer_links.links]]
 text = "Roadmap"
-url = "https://github.com/raskell-io/hx/projects"
+url = "https://github.com/arcanist-sh/hx/projects"
 external = true
 
 [[extra.product.footer_links]]
@@ -205,7 +205,7 @@ url = "https://x.com/raskell_io"
 external = true
 [[extra.product.footer_links.links]]
 text = "Discussions"
-url = "https://github.com/raskell-io/hx/discussions"
+url = "https://github.com/arcanist-sh/hx/discussions"
 external = true
 [[extra.product.footer_links.links]]
 text = "Blog"
@@ -215,7 +215,7 @@ url = "/blog/"
 title = "Legal"
 [[extra.product.footer_links.links]]
 text = "License (MIT)"
-url = "https://github.com/raskell-io/hx/blob/main/LICENSE"
+url = "https://github.com/arcanist-sh/hx/blob/main/LICENSE"
 external = true
 [[extra.product.footer_links.links]]
 text = "Privacy Policy"

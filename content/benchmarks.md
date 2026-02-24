@@ -316,7 +316,7 @@ Peak memory consumption during common operations.
 cargo install hyperfine
 
 # Clone hx and run benchmark suite
-git clone https://github.com/raskell-io/hx.git
+git clone https://github.com/arcanist-sh/hx.git
 cd hx
 ./scripts/benchmark-comparison.sh
 ```
@@ -399,7 +399,7 @@ We welcome benchmark contributions:
 2. Suggest new benchmark scenarios
 3. Report unexpected performance regressions
 
-Submit results or suggestions: [GitHub Issues](https://github.com/raskell-io/hx/issues)
+Submit results or suggestions: [GitHub Issues](https://github.com/arcanist-sh/hx/issues)
 
 ---
 

@@ -9,7 +9,7 @@ template = "page.html"
 tags = ["bhc", "compiler", "tutorial"]
 
 [extra]
-author = "raskell.io"
+author = "arcanist.sh"
 +++
 
 Starting with hx 0.4.2, you can install and use the Basel Haskell Compiler (BHC) directly through hx. BHC is an alternative Haskell compiler optimized for numeric computing and tensor operations.

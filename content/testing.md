@@ -432,11 +432,11 @@ We welcome test contributions:
 - [ ] Test doesn't depend on external state
 - [ ] Test cleans up after itself
 
-Submit test improvements: [GitHub PRs](https://github.com/raskell-io/hx/pulls)
+Submit test improvements: [GitHub PRs](https://github.com/arcanist-sh/hx/pulls)
 
 ---
 
 ## Related Pages
 
 - [Benchmarks](/benchmarks/) — Performance measurements
-- [Contributing](https://github.com/raskell-io/hx/blob/main/CONTRIBUTING.md) — How to contribute
+- [Contributing](https://github.com/arcanist-sh/hx/blob/main/CONTRIBUTING.md) — How to contribute

@@ -1,8 +1,8 @@
-# hx.raskell.io
+# hx.arcanist.sh
 
-Website for [hx](https://github.com/raskell-io/hx) — an extremely fast Haskell package and project manager, written in Rust.
+Website for [hx](https://github.com/arcanist-sh/hx) — an extremely fast Haskell package and project manager, written in Rust.
 
-**Live site:** https://hx.raskell.io
+**Live site:** https://hx.arcanist.sh
 
 ## Overview
 

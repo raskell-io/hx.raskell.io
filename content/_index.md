@@ -9,7 +9,7 @@ Install hx and create your first project in under a minute.
 
 ```bash
 # Install hx
-curl -fsSL https://raw.githubusercontent.com/raskell-io/hx/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/arcanist-sh/hx/main/install.sh | sh
 
 # Create a new project
 hx new my-app && cd my-app

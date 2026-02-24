@@ -310,7 +310,7 @@
     {# ===== Theme script (inline to prevent flash) ===== #}
     {% set mode = config.extra.mode | default(value="site") %}
     {% if mode == "site" or mode == "blog" %}
-    {# raskell.io style 3-way theme toggle for site/blog mode #}
+    {# arcanist.sh style 3-way theme toggle for site/blog mode #}
     <script>
         (function() {
             var colorSchemeKey = 'ThemeColorScheme';
@@ -414,7 +414,7 @@
 
     {# Scripts #}
     {% if mode == "site" or mode == "blog" %}
-    {# raskell.io style scripts for site/blog mode #}
+    {# arcanist.sh style scripts for site/blog mode #}
     <script src="{{ get_url(path='js/anchors.js') | safe }}"></script>
     <script src="{{ get_url(path='js/scroll-to-top.js') | safe }}"></script>
 

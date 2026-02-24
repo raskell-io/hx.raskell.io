@@ -8,7 +8,7 @@ template = "page.html"
 tags = ["bhc", "release", "toolchain"]
 
 [extra]
-author = "raskell.io"
+author = "arcanist.sh"
 +++
 
 **hx 0.6.0** focuses on a single goal: getting from nothing to a running BHC project with as few steps as possible. If BHC is your compiler, hx now handles the rest automatically.
@@ -118,7 +118,7 @@ Five commands. No configuration files to edit, no version matrices to look up, n
 hx self-update
 
 # Or install fresh
-curl -fsSL https://hx.raskell.io/install.sh | sh
+curl -fsSL https://hx.arcanist.sh/install.sh | sh
 ```
 
 ## Resources

@@ -16,7 +16,7 @@ Add as a git submodule:
 
 ```bash
 cd your-zola-site
-git submodule add https://github.com/raskell-io/purple-haze themes/purple-haze
+git submodule add https://github.com/arcanist-sh/purple-haze themes/purple-haze
 ```
 
 In your `config.toml`:
@@ -41,7 +41,7 @@ Purple Haze uses Catppuccin colors with purple emphasis:
 
 ### Product Mode
 
-For tool landing pages like hx.raskell.io:
+For tool landing pages like hx.arcanist.sh:
 
 ```toml
 [extra]
@@ -49,7 +49,7 @@ mode = "product"
 
 [extra.product]
 tagline = "Next-generation Haskell tooling"
-install_command = "curl -fsSL https://get.raskell.io/hx | sh"
+install_command = "curl -fsSL https://get.arcanist.sh/hx | sh"
 ```
 
 ### Docs Mode
@@ -67,8 +67,8 @@ default_version = "latest"
 
 ## Built for
 
-- [hx](https://github.com/raskell-io/hx) - Extremely fast Haskell package manager
-- [bhc](https://github.com/raskell-io/bhc) - Basel Haskell Compiler
+- [hx](https://github.com/arcanist-sh/hx) - Extremely fast Haskell package manager
+- [bhc](https://github.com/arcanist-sh/bhc) - Basel Haskell Compiler
 
 ## License
 

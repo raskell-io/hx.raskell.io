@@ -526,7 +526,7 @@ hx server logs           # View HLS logs
 Ready to try hx? Install it in seconds:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/raskell-io/hx/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/arcanist-sh/hx/main/install.sh | sh
 ```
 
 Then create your first project:

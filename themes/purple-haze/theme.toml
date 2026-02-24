@@ -5,14 +5,14 @@
 name = "purple-haze"
 description = "A Haskell-inspired Zola theme with Catppuccin purple colors. Designed for product landing pages and documentation sites. Built for next-generation Haskell tooling like hx and bhc."
 license = "MIT"
-homepage = "https://github.com/raskell-io/purple-haze"
-repository = "https://github.com/raskell-io/purple-haze"
+homepage = "https://github.com/arcanist-sh/purple-haze"
+repository = "https://github.com/arcanist-sh/purple-haze"
 min_version = "0.19.0"
-demo = "https://hx.raskell.io"
+demo = "https://hx.arcanist.sh"
 
 [author]
 name = "Raffael Schneider"
-homepage = "https://raskell.io"
+homepage = "https://arcanist.sh"
 
 [extra]
 # Theme mode: "product" or "docs"
@@ -22,7 +22,7 @@ mode = "product"
 # Product landing page settings
 # icon = "assets/product-icon.svg"
 # tagline = "Next-generation Haskell tooling"
-# install_command = "curl -fsSL https://get.raskell.io/hx | sh"
+# install_command = "curl -fsSL https://get.arcanist.sh/hx | sh"
 # features = [...]
 # footer_links = [...]
 
