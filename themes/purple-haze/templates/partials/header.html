@@ -17,11 +17,11 @@
             <nav class="flex nav-links" role="navigation" aria-label="Main navigation">
                 {% if config.extra.nav %}
                     {% for link in config.extra.nav %}
-                    <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
+                    <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
                     {% endfor %}
                 {% elif config.extra.nav_links %}
                     {% for link in config.extra.nav_links %}
-                    <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
+                    <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
                     {% endfor %}
                 {% endif %}
                 {% if config.build_search_index %}
@@ -82,11 +82,11 @@
     <nav class="mobile-menu-content" role="navigation" aria-label="Mobile navigation">
         {% if config.extra.nav %}
             {% for link in config.extra.nav %}
-            <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
+            <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
             {% endfor %}
         {% elif config.extra.nav_links %}
             {% for link in config.extra.nav_links %}
-            <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
+            <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.name }}</a>
             {% endfor %}
         {% endif %}
         {% if config.build_search_index %}
@@ -227,13 +227,13 @@
     <nav class="header__nav" role="navigation" aria-label="Main navigation">
         {% if config.extra.nav %}
             {% for link in config.extra.nav %}
-            <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link {% if current_path is defined and current_path == link.url %}active{% endif %}">
+            <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link {% if current_path is defined and current_path == link.url %}active{% endif %}">
                 {{ link.name }}
             </a>
             {% endfor %}
         {% elif config.extra.nav_links %}
             {% for link in config.extra.nav_links %}
-            <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link {% if current_path is defined and current_path == link.url %}active{% endif %}">
+            <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link {% if current_path is defined and current_path == link.url %}active{% endif %}">
                 {{ link.name }}
             </a>
             {% endfor %}
@@ -300,11 +300,11 @@
         <div class="header__mobile-nav-inner">
             {% if config.extra.nav %}
                 {% for link in config.extra.nav %}
-                <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__mobile-link">{{ link.name }}</a>
+                <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__mobile-link">{{ link.name }}</a>
                 {% endfor %}
             {% elif config.extra.nav_links %}
                 {% for link in config.extra.nav_links %}
-                <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__mobile-link">{{ link.name }}</a>
+                <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__mobile-link">{{ link.name }}</a>
                 {% endfor %}
             {% endif %}
             {% if config.extra.github %}

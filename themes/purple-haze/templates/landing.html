@@ -340,7 +340,7 @@
                 <h4 class="landing-footer__title">{{ group.title }}</h4>
                 <ul class="landing-footer__links">
                     {% for link in group.links %}
-                    <li><a href="{% if link.url is starting_with(pat='http') or link.external %}{{ link.url }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.text }}</a></li>
+                    <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.text }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
