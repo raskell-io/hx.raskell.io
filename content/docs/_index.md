@@ -9,11 +9,11 @@ Welcome to the hx documentation. hx is a fast, opinionated, batteries-included t
 
 ## Quick Links
 
-- [Installation](@/docs/installation.md) - Get hx installed on your system
-- [Quick Start](@/docs/quickstart.md) - Your first hx project
-- [CLI Reference](@/docs/commands/_index.md) - All available commands
-- [Configuration](@/docs/configuration/_index.md) - Customize hx with `hx.toml`
-- [Guides](@/docs/guides/_index.md) - Tutorials and workflow guides
+- [Installation](https://docs.arcanist.sh/hx/docs/installation/) - Get hx installed on your system
+- [Quick Start](https://docs.arcanist.sh/hx/docs/quickstart/) - Your first hx project
+- [CLI Reference](https://docs.arcanist.sh/hx/docs/commands/) - All available commands
+- [Configuration](https://docs.arcanist.sh/hx/docs/configuration/) - Customize hx with `hx.toml`
+- [Guides](https://docs.arcanist.sh/hx/docs/guides/) - Tutorials and workflow guides
 
 ## What is hx?
 

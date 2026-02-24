@@ -123,7 +123,7 @@ curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
 ## Resources
 
-- [BHC Platform Snapshots](@/docs/features/bhc-platform.md) — Curated package set guide
-- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC vs BHC comparison
-- [hx toolchain install](@/docs/commands/toolchain.md) — Toolchain management reference
-- [hx new](@/docs/commands/new.md) — Project template reference
+- [BHC Platform Snapshots](https://docs.arcanist.sh/hx/docs/features/bhc-platform/) — Curated package set guide
+- [Compiler Backends](https://docs.arcanist.sh/hx/docs/features/compiler-backends/) — GHC vs BHC comparison
+- [hx toolchain install](https://docs.arcanist.sh/hx/docs/commands/toolchain/) — Toolchain management reference
+- [hx new](https://docs.arcanist.sh/hx/docs/commands/new/) — Project template reference

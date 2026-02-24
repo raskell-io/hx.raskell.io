@@ -250,8 +250,8 @@ For general-purpose Haskell development, GHC remains the recommended choice.
 
 ## Resources
 
-- [Compiler Backends](@/docs/features/compiler-backends.md) — Full GHC vs BHC comparison
-- [BHC Platform](@/docs/features/bhc-platform.md) — Curated snapshot guide
-- [hx bhc-platform](@/docs/commands/bhc-platform.md) — CLI command reference
-- [hx new](@/docs/commands/new.md) — Project templates
-- [hx.toml Reference](@/docs/configuration/hx-toml.md) — Configuration details
+- [Compiler Backends](https://docs.arcanist.sh/hx/docs/features/compiler-backends/) — Full GHC vs BHC comparison
+- [BHC Platform](https://docs.arcanist.sh/hx/docs/features/bhc-platform/) — Curated snapshot guide
+- [hx bhc-platform](https://docs.arcanist.sh/hx/docs/commands/bhc-platform/) — CLI command reference
+- [hx new](https://docs.arcanist.sh/hx/docs/commands/new/) — Project templates
+- [hx.toml Reference](https://docs.arcanist.sh/hx/docs/configuration/hx-toml/) — Configuration details
