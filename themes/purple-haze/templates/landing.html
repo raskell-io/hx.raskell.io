@@ -151,7 +151,7 @@
         </div>
 
         <div class="features__cta">
-            <a href="/features/" class="btn btn--ghost">
+            <a href="{{ get_url(path='features') | safe }}" class="btn btn--ghost">
                 Explore all features
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"/>
@@ -229,7 +229,7 @@
     <div class="container">
         <h2 class="next-steps__title">Next Steps</h2>
         <div class="next-steps__grid">
-            <a href="/docs/" class="next-steps__card">
+            <a href="{{ get_url(path='docs') | safe }}" class="next-steps__card">
                 <div class="next-steps__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
@@ -238,7 +238,7 @@
                 <h3 class="next-steps__card-title">Read the docs</h3>
                 <p class="next-steps__card-desc">Learn all hx commands and configuration options</p>
             </a>
-            <a href="/features/" class="next-steps__card">
+            <a href="{{ get_url(path='features') | safe }}" class="next-steps__card">
                 <div class="next-steps__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -315,7 +315,7 @@
                     </div>
                 </div>
                 <div class="bhc-promo__cta">
-                    <a href="https://bhc.arcanist.sh" target="_blank" rel="noopener" class="bhc-promo__btn">
+                    <a href="https://arcanist.sh/bhc" target="_blank" rel="noopener" class="bhc-promo__btn">
                         Explore BHC
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -340,7 +340,7 @@
                 <h4 class="landing-footer__title">{{ group.title }}</h4>
                 <ul class="landing-footer__links">
                     {% for link in group.links %}
-                    <li><a href="{{ link.url }}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.text }}</a></li>
+                    <li><a href="{% if link.url is starting_with(pat='http') or link.external %}{{ link.url }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.text }}</a></li>
                     {% endfor %}
                 </ul>
             </div>

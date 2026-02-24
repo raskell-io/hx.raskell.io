@@ -118,12 +118,12 @@ Five commands. No configuration files to edit, no version matrices to look up, n
 hx self-update
 
 # Or install fresh
-curl -fsSL https://hx.arcanist.sh/install.sh | sh
+curl -fsSL https://arcanist.sh/hx/install.sh | sh
 ```
 
 ## Resources
 
-- [BHC Platform Snapshots](/docs/features/bhc-platform) — Curated package set guide
-- [Compiler Backends](/docs/features/compiler-backends) — GHC vs BHC comparison
-- [hx toolchain install](/docs/commands/toolchain) — Toolchain management reference
-- [hx new](/docs/commands/new) — Project template reference
+- [BHC Platform Snapshots](@/docs/features/bhc-platform.md) — Curated package set guide
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC vs BHC comparison
+- [hx toolchain install](@/docs/commands/toolchain.md) — Toolchain management reference
+- [hx new](@/docs/commands/new.md) — Project template reference

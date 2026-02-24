@@ -2,7 +2,7 @@
 # hx installer script
 #
 # Usage:
-#   curl -fsSL https://hx.arcanist.sh/install.sh | sh
+#   curl -fsSL https://arcanist.sh/hx/install.sh | sh
 #
 # Options (via environment variables):
 #   HX_VERSION      - Specific version to install (default: latest)

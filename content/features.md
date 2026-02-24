@@ -538,4 +538,4 @@ hx build
 hx run
 ```
 
-See the [Documentation](/docs/) for complete guides and reference.
+See the [Documentation](@/docs/_index.md) for complete guides and reference.

@@ -438,5 +438,5 @@ Submit test improvements: [GitHub PRs](https://github.com/arcanist-sh/hx/pulls)
 
 ## Related Pages
 
-- [Benchmarks](/benchmarks/) — Performance measurements
+- [Benchmarks](@/benchmarks.md) — Performance measurements
 - [Contributing](https://github.com/arcanist-sh/hx/blob/main/CONTRIBUTING.md) — How to contribute
